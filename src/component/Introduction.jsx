@@ -2,7 +2,7 @@ import { Mail, ExternalLink } from "lucide-react";
 
 export default function Introduction({ setActiveSection }) {
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-15 lg:pt-0">
       {/* Name */}
       <h1 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white mb-2">
         Tarun Singh

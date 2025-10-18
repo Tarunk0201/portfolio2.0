@@ -13,7 +13,7 @@ export default function Contact({ setActiveSection }) {
   };
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 pt-28">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-10 md:py-16 md:pt-16">
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
         Contact

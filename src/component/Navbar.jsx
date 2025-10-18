@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, Music, Github } from "lucide-react";
+import { Sun, Moon, Music, Github, Menu } from "lucide-react";
 
-export default function Navbar({ setActiveSection }) {
+export default function Navbar({
+  setActiveSection,
+  sidebarOpen,
+  setSidebarOpen,
+}) {
   const [darkMode, setDarkMode] = useState(true);
   const [time, setTime] = useState(new Date());
 
@@ -23,6 +27,14 @@ export default function Navbar({ setActiveSection }) {
       <div className="flex items-center justify-between px-8 py-3 text-sm">
         {/* Left Section */}
         <div className="flex items-center gap-8">
+          {/* Hamburger Menu for Mobile */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-50 transition"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+
           <a href="/" className="font-bold text-lg">
             <span className=" opacity-50">Tarun</span>Singh
           </a>
@@ -55,15 +67,15 @@ export default function Navbar({ setActiveSection }) {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center bg-white/5 border  border-white/10 rounded-lg px-3 py-1.5">
+          <div className="hidden md:flex items-center opacity-0 lg:opacity-100 bg-white/5 border  border-white/10 rounded-lg px-3 py-1.5">
             <input
               type="text"
               placeholder="Search sections..."
-              className="bg-transparent outline-none dark:text-white text-gray-700 placeholder-gray-500 w-48"
+              className="bg-transparent outline-none dark:text-white text-gray-700 placeholder-gray-500 w-0 lg:w-48"
             />
           </div>
 
-          <div className="bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-xs font-semibold">
+          <div className="bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
             {formattedTime}
           </div>
           <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" />

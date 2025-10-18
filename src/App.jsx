@@ -12,6 +12,7 @@ import Contact from "./component/Contact";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("Introduction");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const sections = [
     "Introduction",
@@ -44,9 +45,18 @@ export default function App() {
   return (
     <Router>
       <div className="flex min-h-screen">
-        <Sidebar active={activeSection} setActive={setActiveSection} />
-        <div className="flex-1 ml-64 flex flex-col">
-          <Navbar setActiveSection={setActiveSection} />
+        <Sidebar
+          active={activeSection}
+          setActive={setActiveSection}
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
+        <div className="flex-1 pt-10 flex flex-col">
+          <Navbar
+            setActiveSection={setActiveSection}
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+          />
           <main className="flex-1">{renderSection()}</main>
           <Footer />
         </div>
