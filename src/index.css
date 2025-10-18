@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-blue: #1c45ff; /* Use as: bg-primary-blue, text-primary-blue, etc. */
+  --font-display: "Inter", sans-serif; /* Use as: font-display */
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Geist", sans-serif;
+  font-weight: 200;
+}
+
+.dark body {
+  background-color: #000000;
+  color: #e5e5e5;
+}
+
+.light body {
+  background-color: #ffffff;
+  color: #000000;
+}
