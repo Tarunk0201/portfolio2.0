@@ -9,12 +9,12 @@ export default function Introduction({ setActiveSection }) {
       </h1>
 
       {/* Tagline */}
-      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-600 dark:text-gray-400 mb-6">
+      <h2 className="text-3xl md:text-4xl font-extrabold opacity-50 dark:text-white text-black mb-6">
         A coder by day, problem-solver by night!
       </h2>
 
       {/* Description */}
-      <p className="text-lg text-gray-700 dark:text-gray-300 max-w-4xl leading-relaxed mb-8">
+      <p className="text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
         MERN Stack developer with a strong foundation in full-stack web
         development. Skilled in building user-friendly, responsive applications
         using{" "}

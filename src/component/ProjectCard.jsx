@@ -58,14 +58,14 @@ export default function Projects({ setActiveSection }) {
   ];
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16">
+    <section className="min-h-screen dark:text-white text-black flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 pt-28">
       {/* Section Title */}
-      <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
+      <h2 className="text-4xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Projects
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-2xl md:text-3xl font-extrabold text-gray-400 mb-10">
+      <h3 className="text-2xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
         A lot of ideas, but some are still under construction!
       </h3>
 
