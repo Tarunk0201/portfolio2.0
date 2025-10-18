@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Sidebar from "./component/Sidebar";
-import Introduction from "./component/introduction";
+import Introduction from "./component/Introduction";
 import About from "./component/About";
 import SkillsTools from "./component/SkillBadge";
 import Projects from "./component/ProjectCard";
