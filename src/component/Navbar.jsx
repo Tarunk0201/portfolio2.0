@@ -5,6 +5,7 @@ export default function Navbar({
   setActiveSection,
   sidebarOpen,
   setSidebarOpen,
+  showMobilePopup,
 }) {
   const [darkMode, setDarkMode] = useState(true);
   const [time, setTime] = useState(new Date());
@@ -30,7 +31,11 @@ export default function Navbar({
           {/* Hamburger Menu for Mobile */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-50 transition"
+            className={`md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-50 transition rounded-full ${
+              showMobilePopup
+                ? "bg-violet-600 hover:bg-violet-700 animate-radiate shadow-lg shadow-violet-600/50 ring-2 ring-violet-600"
+                : ""
+            }`}
           >
             <Menu className="w-5 h-5" />
           </button>
