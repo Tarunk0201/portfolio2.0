@@ -31,7 +31,7 @@ export default function Navbar({
           {/* Hamburger Menu for Mobile */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className={`md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-50 transition rounded-full ${
+            className={`md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-100 md:opacity-50 transition rounded-full ${
               showMobilePopup
                 ? "bg-violet-600 hover:bg-violet-700 animate-radiate shadow-lg shadow-violet-600/50 ring-2 ring-violet-600"
                 : ""
@@ -83,7 +83,7 @@ export default function Navbar({
           <div className="bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
             {formattedTime}
           </div>
-          <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" />
+          {/* <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" /> */}
           {darkMode ? (
             <Sun
               onClick={toggleTheme}

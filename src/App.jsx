@@ -22,6 +22,10 @@ export default function App() {
     }
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [activeSection]);
+
   const closePopup = () => {
     setShowMobilePopup(false);
   };

@@ -2,19 +2,19 @@ import { Mail, ExternalLink } from "lucide-react";
 
 export default function Introduction({ setActiveSection }) {
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-15 lg:pt-0">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 lg:pt-0">
       {/* Name */}
-      <h1 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white mb-2">
+      <h1 className="text-2xl md:text-5xl font-extrabold text-black dark:text-white mb-2">
         Tarun Singh
       </h1>
 
       {/* Tagline */}
-      <h2 className="text-3xl md:text-4xl font-extrabold opacity-50 dark:text-white text-black mb-6">
+      <h2 className="text-xl md:text-4xl font-extrabold opacity-50 dark:text-white text-black mb-6">
         A coder by day, problem-solver by night!
       </h2>
 
       {/* Description */}
-      <p className="text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
+      <p className="text-md md:text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
         MERN Stack developer with a strong foundation in full-stack web
         development. Skilled in building user-friendly, responsive applications
         using{" "}

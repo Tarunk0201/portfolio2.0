@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function Sidebar({ active, setActive, sidebarOpen, setSidebarOpen }) {
+export default function Sidebar({
+  active,
+  setActive,
+  sidebarOpen,
+  setSidebarOpen,
+}) {
   const sections = [
     "Introduction",
     "About Me",
@@ -27,9 +32,11 @@ export default function Sidebar({ active, setActive, sidebarOpen, setSidebarOpen
         />
       )}
 
-      <aside className={`fixed left-0 top-0 h-full w-64 p-6 backdrop-blur-lg dark:text-white text-black font-semibold z-50 transition-transform duration-300 ease-in-out ${
-        sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
-      } md:relative md:translate-x-0`}>
+      <aside
+        className={`fixed left-0 top-0 h-full w-64 p-6 backdrop-blur-lg dark:text-white text-black font-semibold z-50 transition-transform duration-300 ease-in-out ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        } md:relative md:translate-x-0`}
+      >
         {/* Logo */}
         <div className="mb-8 flex items-center gap-2">
           <a href="/" className="font-bold text-lg text-white">

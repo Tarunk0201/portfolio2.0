@@ -21,7 +21,7 @@ const ExperienceItem = ({
     {/* Content */}
     <div className="flex-grow pb-8">
       <div className="flex items-center space-x-2 mb-1">
-        <h4 className="text-xl font-semibold opacity-90 dark:text-white text-black">
+        <h4 className="text-lg md:text-xl font-semibold opacity-90 dark:text-white text-black">
           {title} · {company}
         </h4>
         {latest && (
@@ -64,19 +64,19 @@ export default function Experience({ setActiveSection }) {
   ];
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-10 md:py-16 md:pt-16">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5 md:py-16 md:pt-16">
       {/* Section Title */}
-      <h2 className="text-4xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
+      <h2 className="text-2xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Experience
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-2xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
+      <h3 className="text-xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
         To be trusted with the secret, you must first prove you know the secret!
       </h3>
 
       {/* Main Description */}
-      <p className="text-lg opacity-80 dark:text-white text-black max-w-5xl leading-relaxed mb-12">
+      <p className="md:text-lg opacity-80 dark:text-white text-black max-w-5xl leading-relaxed mb-12">
         Driven by passion, I successfully pivoted my career from a non-technical
         background (UPSC/Humanities) to a professional developer role. I
         self-taught my way into the field, securing a traineeship and then a

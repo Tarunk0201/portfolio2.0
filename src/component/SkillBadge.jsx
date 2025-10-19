@@ -33,19 +33,19 @@ export default function SkillsTools({ setActiveSection }) {
   const skillsRow3 = ["Vercel", "Git", "GitHub", "Postman", "npm"];
 
   return (
-    <section className="min-h-screen dark:text-white text-black flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16">
+    <section className="min-h-screen dark:text-white text-black flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5">
       {/* Section Title */}
-      <h2 className="text-4xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
+      <h2 className="text-2xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Skills & Tools
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-2xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
+      <h3 className="text-xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
         Learned by coding all night and debugging all day!
       </h3>
 
       {/* Description */}
-      <p className="text-lg dark:text-gray-300 text-black max-w-5xl leading-relaxed mb-12">
+      <p className="text-md md:text-lg dark:text-gray-300 text-black max-w-5xl leading-relaxed mb-12">
         As a full-stack Software Engineer, I specialize in building scalable web
         applications using modern technologies such as{" "}
         <span className="dark:text-white text-black opacity-80 font-medium">

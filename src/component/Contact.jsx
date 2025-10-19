@@ -13,14 +13,14 @@ export default function Contact({ setActiveSection }) {
   };
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-10 md:py-16 md:pt-16">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5 md:py-16 md:pt-16">
       {/* Section Title */}
-      <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
+      <h2 className="text-2xl md:text-5xl font-extrabold text-white mb-2">
         Contact
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-2xl md:text-3xl font-extrabold text-gray-400 mb-10">
+      <h3 className="text-xl md:text-3xl font-extrabold text-gray-400 mb-10">
         Get in touch before I write another line of code!
       </h3>
 
@@ -28,13 +28,13 @@ export default function Contact({ setActiveSection }) {
       <form
         id="contact-form"
         onSubmit={handleSubmit}
-        className="max-w-xl w-full space-y-8"
+        className="max-w-xl w-full md:space-y-8 space-y-2"
       >
         {/* Name Input */}
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold text-white"
           >
             Name<span className="text-red-500">*</span>
           </label>
@@ -52,7 +52,7 @@ export default function Contact({ setActiveSection }) {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="block text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold text-white"
           >
             Email<span className="text-red-500">*</span>
           </label>
@@ -73,7 +73,7 @@ export default function Contact({ setActiveSection }) {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="block text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold text-white"
           >
             Message<span className="text-red-500">*</span>
           </label>
