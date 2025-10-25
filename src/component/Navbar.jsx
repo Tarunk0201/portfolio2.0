@@ -45,12 +45,6 @@ export default function Navbar({
           </a>
 
           <div className="hidden sm:flex items-center gap-5">
-            <button
-              onClick={() => setActiveSection("Introduction")}
-              className="hover:opacity-100 opacity-50 transition"
-            >
-              Home
-            </button>
             <a
               href="https://www.linkedin.com/in/tarun-kumar-singh-b939972a2/"
               className="hover:opacity-100 opacity-50 transition"
