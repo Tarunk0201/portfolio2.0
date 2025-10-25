@@ -44,11 +44,6 @@ export default function Sidebar({
           </a>
         </div>
 
-        {/* Section Title */}
-        <h2 className="text-sm font-semibold opacity-50 mb-4 uppercase tracking-wide">
-          Sections
-        </h2>
-
         {/* Navigation Links */}
         <nav className="flex flex-col gap-2">
           {sections.map((item) => (

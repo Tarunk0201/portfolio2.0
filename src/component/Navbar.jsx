@@ -60,6 +60,14 @@ export default function Navbar({
               LinkedIn ↗
             </a>
             <a
+              href="https://github.com/Tarunk0201"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-100 opacity-50 transition"
+            >
+              GitHub ↗
+            </a>
+            <a
               href="#resume"
               className="hover:opacity-100 opacity-50 transition"
               target="_blank"
@@ -72,18 +80,6 @@ export default function Navbar({
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center opacity-0 lg:opacity-100 bg-white/5 border  border-white/10 rounded-lg px-3 py-1.5">
-            <input
-              type="text"
-              placeholder="Search sections..."
-              className="bg-transparent outline-none dark:text-white text-gray-700 placeholder-gray-500 w-0 lg:w-48"
-            />
-          </div>
-
-          <div className="bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
-            {formattedTime}
-          </div>
-          {/* <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" /> */}
           {darkMode ? (
             <Sun
               onClick={toggleTheme}
@@ -95,13 +91,10 @@ export default function Navbar({
               className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50"
             />
           )}
-          <a
-            href="https://github.com/Tarunk0201"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github className="w-4 h-4 hover:opacity-100 opacity-50" />
-          </a>
+          <div className="w-24 text-center bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
+            {formattedTime}
+          </div>
+          {/* <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" /> */}
         </div>
       </div>
     </nav>
