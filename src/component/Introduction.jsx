@@ -2,7 +2,7 @@ import { Mail, ExternalLink } from "lucide-react";
 
 export default function Introduction({ setActiveSection }) {
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 lg:pt-0">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-3 lg:pt-0">
       {/* Name */}
       <h1 className="text-2xl md:text-5xl font-extrabold text-black dark:text-white mb-2">
         Tarun Singh
@@ -10,13 +10,27 @@ export default function Introduction({ setActiveSection }) {
 
       {/* Tagline */}
       <h2 className="text-xl md:text-4xl font-extrabold opacity-50 dark:text-white text-black mb-6">
-        A coder by day, problem-solver by night!
+        Full-stack efficiency, end-to-end excellence.{" "}
       </h2>
 
       {/* Description */}
       <p className="text-md md:text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
-        MERN Stack developer with a strong foundation in full-stack web
-        development. Skilled in building user-friendly, responsive applications
+        Hi, I’m{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          Tarun Kumar Singh
+        </span>
+        , a{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          MERN Stack Developer
+        </span>{" "}
+        based in{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          Indore, India
+        </span>
+        . I build{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          modern, responsive web applications
+        </span>{" "}
         using{" "}
         <span className="dark:text-white text-black opacity-80 font-medium">
           MongoDB
@@ -33,11 +47,24 @@ export default function Introduction({ setActiveSection }) {
         <span className="dark:text-white text-black opacity-80 font-medium">
           Node.js
         </span>
-        . Although, coming from a non-technical background, my passion for tech
-        and eagerness to learn drive me to adapt quickly and grow continuously
-        in this field.
+        , with a focus on delivering{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          smooth, fast, and impactful user experiences
+        </span>
+        .
       </p>
 
+      <p className="text-md md:text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
+        I have a strong foundation in{" "}
+        <span className="dark:text-white text-black opacity-80 font-medium">
+          full-stack web development
+        </span>
+        , combining clean code, intuitive design, and optimized performance to
+        create solutions that truly make a difference. Driven by curiosity and a
+        passion for technology, I’m always eager to explore new tools, refine my
+        skills, and take on challenges that push the boundaries of what’s
+        possible on the web.
+      </p>
       {/* Buttons */}
       <div className="flex items-center gap-4">
         <a

@@ -70,6 +70,41 @@ export default function SkillsTools({ setActiveSection }) {
         to create efficient, maintainable, robust web solutions.
       </p>
 
+      <ol className="list-disc list-inside mb-8 space-y-2">
+        <label className="text-lg md:text-xl font-semibold opacity-90 dark:text-white text-black">
+          Here’s what I bring to the table
+        </label>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          Full-Stack Development: Balancing front-end elegance with back-end
+          performance using the MERN stack (MongoDB, Express.js, React.js,
+          Node.js).
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          Pixel-Perfect Design: Creating responsive, visually appealing
+          interfaces that deliver consistent performance across all devices.
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          API Development: Building secure, scalable RESTful and GraphQL APIs
+          that power seamless data flow.
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          Database Management: Implementing optimized MongoDB and NoSQL data
+          structures for high performance and reliability.
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          UI/UX Implementation: Turning ideas into intuitive, engaging user
+          experiences with a focus on usability and aesthetics.
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          DevOps & Deployment: Automating workflows with CI/CD pipelines,
+          Docker, and cloud services to ensure smooth and scalable deployments.
+        </li>
+        <li className="leading-relaxed max-w-6xl opacity-60 dark:text-white text-black">
+          Version Control & Collaboration: Managing projects efficiently through
+          Git, GitHub, and agile methodologies.
+        </li>
+      </ol>
+
       {/* Skills Badges Container */}
       <div className="flex flex-col space-y-4 max-w-6xl">
         {/* Row 1 */}

@@ -8,12 +8,11 @@ export default function Sidebar({
 }) {
   const sections = [
     "Introduction",
-    "About Me",
-    "Projects",
-    "Skills & Tools",
     "Experience",
-    // "Education",
+    "Skills & Tools",
+    "Projects",
     "Contact",
+    // "Education",
     // "Stats",
   ];
 

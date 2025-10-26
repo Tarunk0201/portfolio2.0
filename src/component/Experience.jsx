@@ -7,6 +7,12 @@ const ExperienceItem = ({
   company,
   dates,
   description,
+  description2,
+  description3,
+  description4,
+  description5,
+  description6,
+  description7,
   latest = false,
 }) => (
   <div className="flex items-start space-x-4">
@@ -31,13 +37,38 @@ const ExperienceItem = ({
         )}
       </div>
 
-      <p className="text-sm  mb-2 opacity-6 0 dark:text-white text-black">
+      <p className="text-sm  mb-2 opacity-80 font-medium dark:text-white text-black">
         {dates}
       </p>
-
-      <p className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
-        {description}
-      </p>
+      <ol className="list-disc">
+        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          {description}
+        </li>
+        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          {description2}
+        </li>
+        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          {description3}
+        </li>
+        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          {description4}
+        </li>
+        {description5 && (
+          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+            {description5}
+          </li>
+        )}
+        {description6 && (
+          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+            {description6}
+          </li>
+        )}
+        {description7 && (
+          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+            {description7}
+          </li>
+        )}
+      </ol>
     </div>
   </div>
 );
@@ -50,7 +81,13 @@ export default function Experience({ setActiveSection }) {
       company: "Averybit",
       dates: "march 2025 - june 2025",
       description:
-        "Worked as a Trainee, where I contributed to a live project using Node.js, Express.js, and Firebase, gaining hands-on experience in backend development and real-world application deployment.",
+        "Worked as a Trainee contributing to a live project focused on backend development.",
+      description2:
+        "Utilized Node.js, Express.js, and Firebase to build and maintain server-side functionality",
+      description3:
+        "Gained hands-on experience in real-world application deployment and database integration.",
+      description4:
+        "Collaborated effectively with team members, improving teamwork, communication, and problem-solving skills.",
       latest: false,
     },
     {
@@ -58,7 +95,19 @@ export default function Experience({ setActiveSection }) {
       company: "Archism",
       dates: "Oct. 2025 - Present",
       description:
-        "Contributing as a MERN Stack Developer, handling both frontend and backend development, API integration, and deployment for scalable web applications.",
+        "Leading the development of the company’s core real estate platform, overseeing end-to-end project execution.",
+      description2:
+        "Managing both frontend and backend architecture using the MERN stack to ensure a seamless, scalable system",
+      description3:
+        "Handling DevOps responsibilities, including CI/CD setup, deployment automation, and cloud infrastructure management.",
+      description4:
+        "Optimizing performance to deliver fast, reliable, and responsive user experiences across devices.",
+      description5:
+        "Implementing secure and efficient APIs to ensure smooth data communication between client and server.",
+      description6:
+        "Collaborating with cross-functional teams to translate business needs into technical solutions.",
+      description7:
+        "Continuously improving code quality, scalability, and maintainability through best development practices.",
       latest: true,
     },
   ];
@@ -72,7 +121,7 @@ export default function Experience({ setActiveSection }) {
 
       {/* Tagline/Subtitle */}
       <h3 className="text-xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
-        To be trusted with the secret, you must first prove you know the secret!
+        True experience speaks through execution, not explanation.
       </h3>
 
       {/* Main Description */}
@@ -93,6 +142,12 @@ export default function Experience({ setActiveSection }) {
             company={item.company}
             dates={item.dates}
             description={item.description}
+            description2={item.description2}
+            description3={item.description3}
+            description4={item.description4}
+            description5={item.description5}
+            description6={item.description6}
+            description7={item.description7}
             latest={item.latest}
           />
         ))}
