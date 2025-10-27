@@ -15,22 +15,19 @@ export default function Contact({ setActiveSection }) {
     const message = formData.get("message");
 
     const sendRequest = async () => {
-      const response = await fetch(
-        `${import.meta.env.VITE_CONTACT_ENDPOINT}/contact/send`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-API-Key": import.meta.env.VITE_API_KEY,
-          },
-          body: JSON.stringify({
-            source: "WebSite",
-            name,
-            email,
-            message,
-          }),
-        }
-      );
+      const response = await fetch(`${import.meta.env.BASE_URL}/contact/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-Key": import.meta.env.KEY,
+        },
+        body: JSON.stringify({
+          source: "WebSite",
+          name,
+          email,
+          message,
+        }),
+      });
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
