@@ -6,6 +6,10 @@
   --font-display: "Inter", sans-serif; /* Use as: font-display */
 }
 
+.Toastify__progress-bar--dark {
+  background: #22c55e;
+}
+
 body {
   background-color: black;
   color: white;

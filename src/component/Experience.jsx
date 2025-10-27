@@ -79,7 +79,7 @@ export default function Experience({ setActiveSection }) {
     {
       title: "Trainee",
       company: "Averybit",
-      dates: "march 2025 - june 2025",
+      dates: "March 2025 - June 2025",
       description:
         "Worked as a Trainee contributing to a live project focused on backend development.",
       description2:
@@ -113,7 +113,7 @@ export default function Experience({ setActiveSection }) {
   ];
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5 md:py-16 md:pt-16">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-start px-8 md:px-16 lg:px-24 py-8">
       {/* Section Title */}
       <h2 className="text-2xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Experience
@@ -156,17 +156,17 @@ export default function Experience({ setActiveSection }) {
       {/* Navigation Links */}
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
-          onClick={() => setActiveSection("Skills & Tools")}
+          onClick={() => setActiveSection("About Me")}
           className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
         >
-          <ArrowLeft size={16} /> Skills & Tools
+          <ArrowLeft size={16} /> About Me
         </button>
 
         <button
-          onClick={() => setActiveSection("Contact")}
+          onClick={() => setActiveSection("Skills & Tools")}
           className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
         >
-          Contact <ArrowRight size={16} />
+          Skills & Tools <ArrowRight size={16} />
         </button>
       </div>
     </section>

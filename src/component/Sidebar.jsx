@@ -7,7 +7,7 @@ export default function Sidebar({
   setSidebarOpen,
 }) {
   const sections = [
-    "Introduction",
+    "About Me",
     "Experience",
     "Skills & Tools",
     "Projects",

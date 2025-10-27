@@ -62,7 +62,7 @@ export default function Navbar({
               GitHub ↗
             </a>
             <a
-              href="#resume"
+              href="/Tarun Kumar (MERN Stack).pdf"
               className="hover:opacity-100 opacity-50 transition"
               target="_blank"
               rel="noopener noreferrer"

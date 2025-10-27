@@ -1,36 +1,88 @@
-import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, Loader2 } from "lucide-react";
+import { toast } from "react-toastify";
 
 export default function Contact({ setActiveSection }) {
-  const handleSubmit = (e) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic for form submission (e.g., sending data to an API) goes here
-    console.log("Form submitted!");
+    setIsLoading(true);
+
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const sendRequest = async () => {
+      const response = await fetch(
+        `${import.meta.env.VITE_CONTACT_ENDPOINT}/contact/send`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-API-Key": import.meta.env.VITE_API_KEY,
+          },
+          body: JSON.stringify({
+            source: "WebSite",
+            name,
+            email,
+            message,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(
+          errorData.message || "Failed to send message. Please try again."
+        );
+      }
+      return response.json();
+    };
+
+    try {
+      await toast.promise(sendRequest(), {
+        pending: "Sending your message...",
+        success: {
+          render({ data }) {
+            return data.message || "Message sent successfully!";
+          },
+        },
+        error: {
+          render({ data }) {
+            return data.message || "An error occurred.";
+          },
+        },
+      });
+
+      document.getElementById("contact-form").reset();
+    } catch (error) {
+      console.error("Submit error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleReset = () => {
-    // Logic for resetting the form goes here
     document.getElementById("contact-form").reset();
   };
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5 md:py-16 md:pt-16">
-      {/* Section Title */}
+    <section className="min-h-screen text-gray-100 flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24 ">
       <h2 className="text-2xl md:text-5xl font-extrabold text-white mb-2">
         Contact
       </h2>
 
-      {/* Tagline/Subtitle */}
-      <h3 className="text-xl md:text-3xl font-extrabold text-gray-400 mb-10">
+      <h3 className="text-xl md:text-3xl font-extrabold text-gray-400 mb-5">
         Get in touch before I write another line of code!
       </h3>
 
-      {/* Contact Form */}
       <form
         id="contact-form"
         onSubmit={handleSubmit}
         className="max-w-xl w-full md:space-y-8 space-y-2"
       >
-        {/* Name Input */}
         <div className="space-y-2">
           <label
             htmlFor="name"
@@ -48,8 +100,7 @@ export default function Contact({ setActiveSection }) {
           />
         </div>
 
-        {/* Email Input */}
-        <div className="space-y-2">
+        <div className="space-y-1">
           <label
             htmlFor="email"
             className="block md:text-lg font-semibold text-white"
@@ -69,7 +120,6 @@ export default function Contact({ setActiveSection }) {
           </p>
         </div>
 
-        {/* Message Textarea */}
         <div className="space-y-2">
           <label
             htmlFor="message"
@@ -87,29 +137,39 @@ export default function Contact({ setActiveSection }) {
           ></textarea>
         </div>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full py-4 bg-violet-600 text-white text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors shadow-lg shadow-violet-600/30"
-        >
-          Submit
-        </button>
+        <div className="flex gap-1">
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full py-4 bg-violet-600 text-white text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors shadow-lg shadow-violet-600/30
+                     flex items-center justify-center gap-2
+                     disabled:bg-violet-400 disabled:cursor-not-allowed"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="h-5 w-5 animate-spin" />
+                Submitting...
+              </>
+            ) : (
+              "Submit"
+            )}
+          </button>
 
-        {/* Reset Button */}
-        <button
-          type="button"
-          onClick={handleReset}
-          className="w-full py-4 text-gray-400 text-lg font-bold rounded-lg hover:text-white transition-colors border border-transparent hover:border-gray-700"
-        >
-          Reset
-        </button>
+          <button
+            type="button"
+            onClick={handleReset}
+            className="w-full py-4 text-gray-400 text-lg font-bold rounded-lg hover:text-white transition-colors border border-transparent hover:border-gray-700"
+          >
+            Reset
+          </button>
+        </div>
       </form>
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
-          onClick={() => setActiveSection("Experience")}
+          onClick={() => setActiveSection("Projects")}
           className="hover:opacity-100 dark:text-white text-black opacity-50  flex items-center gap-1 font-medium"
         >
-          <ArrowLeft size={16} /> Experience
+          <ArrowLeft size={16} /> Projects
         </button>
       </div>
     </section>

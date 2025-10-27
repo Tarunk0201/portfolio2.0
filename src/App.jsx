@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// --- Step 1: Change your import ---
+import { ToastContainer } from "react-toastify";
+// --- Step 2: Add this required CSS import ---
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./component/Navbar";
 import Sidebar from "./component/Sidebar";
-import Introduction from "./component/Introduction";
+import AboutMe from "./component/AboutMe";
 import SkillsTools from "./component/SkillBadge";
 import Projects from "./component/ProjectCard";
 import Experience from "./component/Experience";
@@ -10,7 +14,7 @@ import Footer from "./component/Footer";
 import Contact from "./component/Contact";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("Introduction");
+  const [activeSection, setActiveSection] = useState("About Me");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
 
@@ -30,18 +34,17 @@ export default function App() {
   };
 
   const sections = [
-    "Introduction",
     "About Me",
-    "Projects",
-    "Skills & Tools",
     "Experience",
+    "Skills & Tools",
+    "Projects",
     "Contact",
   ];
 
   const renderSection = () => {
     switch (activeSection) {
-      case "Introduction":
-        return <Introduction setActiveSection={setActiveSection} />;
+      case "About Me":
+        return <AboutMe setActiveSection={setActiveSection} />;
       case "Projects":
         return <Projects setActiveSection={setActiveSection} />;
       case "Skills & Tools":
@@ -51,12 +54,24 @@ export default function App() {
       case "Contact":
         return <Contact setActiveSection={setActiveSection} />;
       default:
-        return <Introduction />;
+        return <AboutMe setActiveSection={setActiveSection} />;
     }
   };
 
   return (
     <Router>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="flex min-h-screen">
         <Sidebar
           active={activeSection}

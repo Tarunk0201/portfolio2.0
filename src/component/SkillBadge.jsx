@@ -33,7 +33,7 @@ export default function SkillsTools({ setActiveSection }) {
   const skillsRow3 = ["Vercel", "Git", "GitHub", "Postman", "npm"];
 
   return (
-    <section className="min-h-screen dark:text-white text-black flex flex-col justify-center px-8 md:px-16 lg:px-24 py-5">
+    <section className="min-h-screen dark:text-white text-black flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24">
       {/* Section Title */}
       <h2 className="text-2xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Skills & Tools
@@ -132,17 +132,17 @@ export default function SkillsTools({ setActiveSection }) {
       {/* Navigation Links */}
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
-          onClick={() => setActiveSection("Projects")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
-        >
-          <ArrowLeft size={16} /> Projects
-        </button>
-
-        <button
           onClick={() => setActiveSection("Experience")}
           className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
         >
-          Experience <ArrowRight size={16} />
+          <ArrowLeft size={16} /> Experience
+        </button>
+
+        <button
+          onClick={() => setActiveSection("Projects")}
+          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+        >
+          Projects <ArrowRight size={16} />
         </button>
       </div>
     </section>

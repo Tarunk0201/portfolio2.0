@@ -58,7 +58,7 @@ export default function Projects({ setActiveSection }) {
   ];
 
   return (
-    <section className="min-h-screen dark:text-white text-black flex flex-col justify-center px-8 md:px-16 lg:px-24 py-15 md:py-16">
+    <section className="min-h-screen dark:text-white text-black flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24 ">
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Projects
@@ -85,17 +85,17 @@ export default function Projects({ setActiveSection }) {
       {/* Navigation Links */}
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
-          onClick={() => setActiveSection("About Me")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
-        >
-          <ArrowLeft size={16} /> About
-        </button>
-
-        <button
           onClick={() => setActiveSection("Skills & Tools")}
           className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
         >
-          Skills & Tools <ArrowRight size={16} />
+          <ArrowLeft size={16} /> Skills & Tools
+        </button>
+
+        <button
+          onClick={() => setActiveSection("Contact")}
+          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+        >
+          Contact <ArrowRight size={16} />
         </button>
       </div>
     </section>

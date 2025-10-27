@@ -1,11 +1,11 @@
 import { Mail, ExternalLink } from "lucide-react";
 
-export default function Introduction({ setActiveSection }) {
+export default function AboutMe({ setActiveSection }) {
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-3 lg:pt-0">
+    <section className="min-h-screen text-gray-100 flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24 ">
       {/* Name */}
       <h1 className="text-2xl md:text-5xl font-extrabold text-black dark:text-white mb-2">
-        Tarun Singh
+        About Me
       </h1>
 
       {/* Tagline */}
@@ -68,7 +68,7 @@ export default function Introduction({ setActiveSection }) {
       {/* Buttons */}
       <div className="flex items-center gap-4">
         <a
-          href="/resume.pdf"
+          href="/Tarun Kumar (MERN Stack).pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
@@ -77,7 +77,7 @@ export default function Introduction({ setActiveSection }) {
         </a>
 
         <a
-          href="mailto:youremail@example.com"
+          href="mailto:tksingh0201@gmail.com"
           className="inline-flex items-center gap-2 opacity-50 hover:opacity-100 dark:text-white text-black text-sm font-medium"
         >
           <Mail size={16} /> Send Mail
@@ -87,10 +87,10 @@ export default function Introduction({ setActiveSection }) {
       {/* Scroll Link */}
       <div className="mt-10 flex justify-end">
         <button
-          onClick={() => setActiveSection("About Me")}
+          onClick={() => setActiveSection("Experience")}
           className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 text-sm font-medium"
         >
-          About Me <span className="text-lg">›</span>
+          Experience <span className="text-lg">›</span>
         </button>
       </div>
     </section>
