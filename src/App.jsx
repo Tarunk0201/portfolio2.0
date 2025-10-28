@@ -9,12 +9,20 @@ import Sidebar from "./component/Sidebar";
 import AboutMe from "./component/AboutMe";
 import SkillsTools from "./component/SkillBadge";
 import Projects from "./component/ProjectCard";
+import ProjectDetail from "./component/ProjectDetail";
 import Experience from "./component/Experience";
 import Footer from "./component/Footer";
 import Contact from "./component/Contact";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("About Me");
+  const [activeSection, setActiveSection] = useState(() => {
+    const saved = localStorage.getItem("activeSection");
+    return saved || "About Me";
+  });
+  const [selectedProject, setSelectedProject] = useState(() => {
+    const saved = localStorage.getItem("selectedProject");
+    return saved ? JSON.parse(saved) : null;
+  });
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showMobilePopup, setShowMobilePopup] = useState(false);
 
@@ -28,6 +36,18 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeSection]);
+
+  useEffect(() => {
+    localStorage.setItem("activeSection", activeSection);
+  }, [activeSection]);
+
+  useEffect(() => {
+    if (selectedProject) {
+      localStorage.setItem("selectedProject", JSON.stringify(selectedProject));
+    } else {
+      localStorage.removeItem("selectedProject");
+    }
+  }, [selectedProject]);
 
   const closePopup = () => {
     setShowMobilePopup(false);
@@ -46,7 +66,19 @@ export default function App() {
       case "About Me":
         return <AboutMe setActiveSection={setActiveSection} />;
       case "Projects":
-        return <Projects setActiveSection={setActiveSection} />;
+        return (
+          <Projects
+            setActiveSection={setActiveSection}
+            setSelectedProject={setSelectedProject}
+          />
+        );
+      case "ProjectDetail":
+        return (
+          <ProjectDetail
+            setActiveSection={setActiveSection}
+            project={selectedProject}
+          />
+        );
       case "Skills & Tools":
         return <SkillsTools setActiveSection={setActiveSection} />;
       case "Experience":
