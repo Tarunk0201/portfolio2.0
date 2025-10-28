@@ -85,7 +85,7 @@ export default function Navbar({
               className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50"
             />
           )}
-          <div className="w-24 text-center bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
+          <div className="w-28 text-center bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
             {formattedTime}
           </div>
           {/* <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" /> */}
