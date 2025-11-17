@@ -9,7 +9,7 @@ const ProjectCard = ({ title, tagline, description, onClick }) => (
     <div>
       <h4 className="text-xl font-bold text-white mb-1">{title}</h4>
       <p className="text-lg font-semibold text-violet-400 mb-3">{tagline}</p>
-      <p className="text-gray-300 text-base mb-4 line-clamp-3">{description}</p>
+      {/* <p className="text-gray-300 text-base mb-4 line-clamp-3">{description}</p> */}
     </div>
     <div className="text-sm font-medium text-violet-500 hover:text-violet-400 transition-colors">
       Learn More...
@@ -60,118 +60,118 @@ export default function Projects({ setActiveSection, setSelectedProject }) {
       liveLink: "https://play.google.com/store/apps/details?id=com.swasthfit",
       githubLink: "https://github.com/Tarunk0201/swasthfit.git",
     },
-    {
-      title: "Portfolio | Aditya Domle",
-      tagline:
-        "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-      description:
-        "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-      link: "#",
-      subtitle:
-        "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-      techStack: ["React.js", "Tailwind CSS", "Vite", "Framer Motion"],
-      features: [
-        "Dynamic project showcase",
-        "Skills and contributions section",
-        "Responsive design",
-        "Smooth animations",
-      ],
-      learnings: [
-        "Advanced React state management",
-        "Tailwind CSS for styling",
-        "Vite for fast development",
-      ],
-      challenges: [
-        "Optimizing performance for large content",
-        "Ensuring cross-browser compatibility",
-      ],
-      liveLink: "#",
-      githubLink: "#",
-    },
-    {
-      title: "News Hub | Real-Time News Platform",
-      tagline: "Real-Time News Platform",
-      description:
-        "A real-time news platform delivering the latest headlines across various categories using the News API.",
-      link: "#",
-      subtitle:
-        "A real-time news platform delivering the latest headlines across various categories using the News API.",
-      techStack: ["React.js", "News API", "Tailwind CSS"],
-      features: [
-        "Real-time news updates",
-        "Category-based filtering",
-        "Responsive design",
-        "Search functionality",
-      ],
-      learnings: [
-        "API integration",
-        "State management for dynamic data",
-        "UI/UX for news platforms",
-      ],
-      challenges: [
-        "Handling API rate limits",
-        "Ensuring data freshness",
-        "Optimizing for mobile devices",
-      ],
-      liveLink: "#",
-      githubLink: "#",
-    },
-    {
-      title: "Freshmart Store | Modern Grocery Web App",
-      tagline: "Modern Grocery Web App",
-      description:
-        "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
-      link: "#",
-      subtitle:
-        "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
-      techStack: ["React.js", "Vite", "Redux", "Tailwind CSS"],
-      features: [
-        "Product catalog",
-        "Shopping cart functionality",
-        "User authentication",
-        "Responsive design",
-      ],
-      learnings: [
-        "Redux for state management",
-        "Building e-commerce features",
-        "Vite for build optimization",
-      ],
-      challenges: [
-        "Complex state management",
-        "Ensuring security for payments",
-        "Scalability for product inventory",
-      ],
-      liveLink: "#",
-      githubLink: "#",
-    },
-    {
-      title: "GitHub Profile Viewer | Instant GitHub Insights",
-      tagline: "Instant GitHub Insights",
-      description:
-        "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
-      link: "#",
-      subtitle:
-        "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
-      techStack: ["HTML", "CSS", "JavaScript", "GitHub API"],
-      features: [
-        "Profile overview",
-        "Repository listing",
-        "Follower and following counts",
-        "Clean UI design",
-      ],
-      learnings: [
-        "Vanilla JavaScript for DOM manipulation",
-        "API data fetching",
-        "Responsive CSS",
-      ],
-      challenges: [
-        "Handling API errors",
-        "Optimizing for different screen sizes",
-        "Ensuring fast load times",
-      ],
-      liveLink: "#",
-      githubLink: "#",
-    },
+    // {
+    //   title: "Portfolio | Aditya Domle",
+    //   tagline:
+    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
+    //   description:
+    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
+    //   link: "#",
+    //   subtitle:
+    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
+    //   techStack: ["React.js", "Tailwind CSS", "Vite", "Framer Motion"],
+    //   features: [
+    //     "Dynamic project showcase",
+    //     "Skills and contributions section",
+    //     "Responsive design",
+    //     "Smooth animations",
+    //   ],
+    //   learnings: [
+    //     "Advanced React state management",
+    //     "Tailwind CSS for styling",
+    //     "Vite for fast development",
+    //   ],
+    //   challenges: [
+    //     "Optimizing performance for large content",
+    //     "Ensuring cross-browser compatibility",
+    //   ],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    // },
+    // {
+    //   title: "News Hub | Real-Time News Platform",
+    //   tagline: "Real-Time News Platform",
+    //   description:
+    //     "A real-time news platform delivering the latest headlines across various categories using the News API.",
+    //   link: "#",
+    //   subtitle:
+    //     "A real-time news platform delivering the latest headlines across various categories using the News API.",
+    //   techStack: ["React.js", "News API", "Tailwind CSS"],
+    //   features: [
+    //     "Real-time news updates",
+    //     "Category-based filtering",
+    //     "Responsive design",
+    //     "Search functionality",
+    //   ],
+    //   learnings: [
+    //     "API integration",
+    //     "State management for dynamic data",
+    //     "UI/UX for news platforms",
+    //   ],
+    //   challenges: [
+    //     "Handling API rate limits",
+    //     "Ensuring data freshness",
+    //     "Optimizing for mobile devices",
+    //   ],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    // },
+    // {
+    //   title: "Freshmart Store | Modern Grocery Web App",
+    //   tagline: "Modern Grocery Web App",
+    //   description:
+    //     "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
+    //   link: "#",
+    //   subtitle:
+    //     "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
+    //   techStack: ["React.js", "Vite", "Redux", "Tailwind CSS"],
+    //   features: [
+    //     "Product catalog",
+    //     "Shopping cart functionality",
+    //     "User authentication",
+    //     "Responsive design",
+    //   ],
+    //   learnings: [
+    //     "Redux for state management",
+    //     "Building e-commerce features",
+    //     "Vite for build optimization",
+    //   ],
+    //   challenges: [
+    //     "Complex state management",
+    //     "Ensuring security for payments",
+    //     "Scalability for product inventory",
+    //   ],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    // },
+    // {
+    //   title: "GitHub Profile Viewer | Instant GitHub Insights",
+    //   tagline: "Instant GitHub Insights",
+    //   description:
+    //     "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
+    //   link: "#",
+    //   subtitle:
+    //     "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
+    //   techStack: ["HTML", "CSS", "JavaScript", "GitHub API"],
+    //   features: [
+    //     "Profile overview",
+    //     "Repository listing",
+    //     "Follower and following counts",
+    //     "Clean UI design",
+    //   ],
+    //   learnings: [
+    //     "Vanilla JavaScript for DOM manipulation",
+    //     "API data fetching",
+    //     "Responsive CSS",
+    //   ],
+    //   challenges: [
+    //     "Handling API errors",
+    //     "Optimizing for different screen sizes",
+    //     "Ensuring fast load times",
+    //   ],
+    //   liveLink: "#",
+    //   githubLink: "#",
+    // },
   ];
 
   return (

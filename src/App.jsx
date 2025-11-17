@@ -105,12 +105,14 @@ export default function App() {
         theme="dark"
       />
       <div className="flex min-h-screen">
-        <Sidebar
-          active={activeSection}
-          setActive={setActiveSection}
-          sidebarOpen={sidebarOpen}
-          setSidebarOpen={setSidebarOpen}
-        />
+        <div className="sticky top-0 h-screen self-start">
+          <Sidebar
+            active={activeSection}
+            setActive={setActiveSection}
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+          />
+        </div>
         <div className="flex-1 pt-10 flex flex-col">
           <Navbar
             setActiveSection={setActiveSection}

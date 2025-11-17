@@ -21,7 +21,12 @@ export default function Navbar({
     document.documentElement.classList.toggle("light");
   };
 
-  const formattedTime = time.toLocaleTimeString();
+  const formattedTime = time.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b dark:text-white text-black border-black/10 backdrop-blur-lg">
@@ -88,7 +93,6 @@ export default function Navbar({
           <div className="w-28 text-center bg-green-500/20 text-green-400 hidden md:block px-3 py-1.5 rounded-full text-xs font-semibold">
             {formattedTime}
           </div>
-          {/* <Music className="w-4 h-4 cursor-pointer hover:opacity-100 opacity-50" /> */}
         </div>
       </div>
     </nav>
