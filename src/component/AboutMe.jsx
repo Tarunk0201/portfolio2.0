@@ -9,46 +9,42 @@ export default function AboutMe({ setActiveSection }) {
       </h1>
 
       {/* Tagline */}
-      <h2 className="text-xl md:text-4xl font-extrabold opacity-50 dark:text-white text-black mb-6">
+      <h2 className="text-xl md:text-4xl font-extrabold text-gray-500 mb-6">
         Full-stack efficiency, end-to-end excellence.{" "}
       </h2>
 
       {/* Description */}
       <p className="text-md md:text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
         Hi, I’m{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           Tarun Kumar Singh
         </span>
         , a{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           MERN Stack Developer
         </span>{" "}
         based in{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           Indore, India
         </span>
         . I build{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           modern, responsive web applications
         </span>{" "}
         using{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
-          MongoDB
-        </span>
+        <span className="dark:text-white text-black  font-medium">MongoDB</span>
         ,{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           Express.js
         </span>
         ,{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           React.js
         </span>
         , and{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
-          Node.js
-        </span>
+        <span className="dark:text-white text-black  font-medium">Node.js</span>
         , with a focus on delivering{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           smooth, fast, and impactful user experiences
         </span>
         .
@@ -56,7 +52,7 @@ export default function AboutMe({ setActiveSection }) {
 
       <p className="text-md md:text-lg dark:text-white text-black max-w-4xl leading-relaxed mb-8">
         I have a strong foundation in{" "}
-        <span className="dark:text-white text-black opacity-80 font-medium">
+        <span className="dark:text-white text-black  font-medium">
           full-stack web development
         </span>
         , combining clean code, intuitive design, and optimized performance to
@@ -71,7 +67,7 @@ export default function AboutMe({ setActiveSection }) {
           href="/Tarun Kumar (MERN Stack).pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
+          className="inline-flex items-center gap-2 bg-green-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
         >
           Get Resume <ExternalLink size={16} />
         </a>
@@ -88,7 +84,7 @@ export default function AboutMe({ setActiveSection }) {
       <div className="mt-10 flex justify-end">
         <button
           onClick={() => setActiveSection("Experience")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 text-sm font-medium"
+          className="hover:opacity-100 text-gray-500 flex items-center gap-1 text-sm font-medium"
         >
           Experience <span className="text-lg">›</span>
         </button>

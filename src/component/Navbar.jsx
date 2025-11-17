@@ -38,7 +38,7 @@ export default function Navbar({
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className={`md:hidden w-6 h-6 flex items-center justify-center hover:opacity-100 opacity-100 md:opacity-50 transition rounded-full ${
               showMobilePopup
-                ? "bg-violet-600 hover:bg-violet-700 animate-radiate shadow-lg shadow-violet-600/50 ring-2 ring-violet-600"
+                ? "bg-green-600 hover:bg-violet-700 animate-radiate shadow-lg shadow-violet-600/50 ring-2 ring-violet-600"
                 : ""
             }`}
           >

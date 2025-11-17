@@ -182,7 +182,7 @@ export default function Projects({ setActiveSection, setSelectedProject }) {
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-2xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
+      <h3 className="text-2xl md:text-3xl font-extrabold text-gray-500 mb-10">
         A lot of ideas, but some are still under construction!
       </h3>
 
@@ -206,14 +206,14 @@ export default function Projects({ setActiveSection, setSelectedProject }) {
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
           onClick={() => setActiveSection("Skills & Tools")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+          className="hover:opacity-100 text-gray-500 flex items-center gap-1 font-medium"
         >
           <ArrowLeft size={16} /> Skills & Tools
         </button>
 
         <button
           onClick={() => setActiveSection("Contact")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+          className="hover:opacity-100 text-gray-500 flex items-center gap-1 font-medium"
         >
           Contact <ArrowRight size={16} />
         </button>

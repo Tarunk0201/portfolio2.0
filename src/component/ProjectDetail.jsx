@@ -2,14 +2,16 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 // Re-usable heading component matching your style
 const SectionHeading = ({ title }) => (
-  <h3 className="text-lg md:text-xl font-semibold opacity-90 mb-4">{title}</h3>
+  <h3 className="text-lg md:text-xl font-semibold dark:text-gray-200 text-black mb-4">
+    {title}
+  </h3>
 );
 
 // Re-usable list component matching your style
 const ProjectList = ({ items }) => (
   <ul className="list-disc list-inside space-y-2">
     {items.map((item, index) => (
-      <li key={index} className="leading-relaxed opacity-60 max-w-4xl">
+      <li key={index} className="leading-relaxed dark:text-gray-400 max-w-4xl">
         {item}
       </li>
     ))}
@@ -35,12 +37,12 @@ export default function ProjectDetail({ setActiveSection, project }) {
       </h2>
 
       {/* Subtitle */}
-      <h3 className="text-lg md:text-2xl font-medium opacity-70  mb-6">
+      <h3 className="text-lg md:text-2xl font-medium text-gray-500  mb-6">
         {currentProject.subtitle}
       </h3>
 
       {/* Main Description */}
-      <p className="md:text-lg opacity-80  max-w-5xl leading-relaxed mb-10">
+      <p className="md:text-lg   max-w-5xl leading-relaxed mb-10">
         {currentProject.description}
       </p>
 
@@ -89,14 +91,14 @@ export default function ProjectDetail({ setActiveSection, project }) {
               {/* Live Link Button (Styled with violet from your reference) */}
               <button
                 onClick={() => window.open(currentProject.liveLink, "_blank")}
-                className="inline-flex items-center justify-center text-sm font-semibold px-5 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700  transition-colors"
+                className="inline-flex items-center justify-center text-sm font-semibold px-5 py-2.5 rounded-lg bg-green-600 hover:bg-violet-700  transition-colors"
               >
                 Live <ArrowUpRight size={16} className="ml-1.5" />
               </button>
               {/* GitHub Link (Styled like your nav links) */}
               <button
                 onClick={() => window.open(currentProject.githubLink, "_blank")}
-                className="hover:opacity-100  opacity-50 flex items-center gap-1 font-medium transition-opacity"
+                className="hover:opacity-100  opacity-50 flex items-center gap-1 -z-1 font-medium transition-opacity"
               >
                 GitHub <ArrowUpRight size={16} />
               </button>

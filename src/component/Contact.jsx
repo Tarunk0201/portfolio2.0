@@ -75,7 +75,7 @@ export default function Contact({ setActiveSection }) {
         Contact
       </h2>
 
-      <h3 className="text-xl md:text-3xl font-extrabold text-gray-400 mb-5">
+      <h3 className="text-xl md:text-3xl font-extrabold text-gray-500 mb-5">
         Get in touch before I write another line of code!
       </h3>
 
@@ -142,7 +142,7 @@ export default function Contact({ setActiveSection }) {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 bg-violet-600 text-white text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors shadow-lg shadow-violet-600/30
+            className="w-full py-4 bg-green-600 text-white text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors shadow-lg shadow-violet-600/30
                      flex items-center justify-center gap-2
                      disabled:bg-violet-400 disabled:cursor-not-allowed"
           >
@@ -168,7 +168,7 @@ export default function Contact({ setActiveSection }) {
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
           onClick={() => setActiveSection("Projects")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50  flex items-center gap-1 font-medium"
+          className="hover:opacity-100 text-gray-500  flex items-center gap-1 font-medium"
         >
           <ArrowLeft size={16} /> Projects
         </button>

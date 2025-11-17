@@ -19,7 +19,7 @@ const ExperienceItem = ({
     {/* Icon/Bullet Point */}
     <div className="flex-shrink-0 mt-1">
       {/* Circle background matching the style */}
-      <div className="w-4 h-4 rounded-full bg-violet-600 ring-4 ring-gray-900 flex items-center justify-center">
+      <div className="w-4 h-4 rounded-full bg-green-600 ring-4 dark:ring-gray-900 ring-gray-200 flex items-center justify-center">
         {/* Optional: You could use an icon here, but the image shows a simple circle */}
       </div>
     </div>
@@ -27,44 +27,44 @@ const ExperienceItem = ({
     {/* Content */}
     <div className="flex-grow pb-8">
       <div className="flex items-center space-x-2 mb-1">
-        <h4 className="text-lg md:text-xl font-semibold opacity-90 dark:text-white text-black">
+        <h4 className="text-lg md:text-xl font-semibold dark:text-gray-200 text-black">
           {title} · {company}
         </h4>
         {latest && (
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-600 opacity-90 dark:text-white text-black tracking-wider">
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-600 text-gray-200 tracking-wider">
             Latest
           </span>
         )}
       </div>
 
-      <p className="text-sm  mb-2 opacity-80 font-medium dark:text-white text-black">
+      <p className="text-sm  mb-2  font-medium dark:text-white text-black">
         {dates}
       </p>
       <ol className="list-disc">
-        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+        <li className=" leading-relaxed max-w-4xl text-gray-500">
           {description}
         </li>
-        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+        <li className=" leading-relaxed max-w-4xl text-gray-500">
           {description2}
         </li>
-        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+        <li className=" leading-relaxed max-w-4xl text-gray-500">
           {description3}
         </li>
-        <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+        <li className=" leading-relaxed max-w-4xl text-gray-500">
           {description4}
         </li>
         {description5 && (
-          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          <li className=" leading-relaxed max-w-4xl text-gray-500">
             {description5}
           </li>
         )}
         {description6 && (
-          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          <li className=" leading-relaxed max-w-4xl text-gray-500">
             {description6}
           </li>
         )}
         {description7 && (
-          <li className=" leading-relaxed max-w-4xl opacity-60 dark:text-white text-black">
+          <li className=" leading-relaxed max-w-4xl text-gray-500">
             {description7}
           </li>
         )}
@@ -120,12 +120,12 @@ export default function Experience({ setActiveSection }) {
       </h2>
 
       {/* Tagline/Subtitle */}
-      <h3 className="text-xl md:text-3xl font-extrabold opacity-50 dark:text-white text-black mb-10">
+      <h3 className="text-xl md:text-3xl font-extrabold text-gray-500 mb-10">
         True experience speaks through execution, not explanation.
       </h3>
 
       {/* Main Description */}
-      <p className="md:text-lg opacity-80 dark:text-white text-black max-w-5xl leading-relaxed mb-12">
+      <p className="md:text-lg  dark:text-white text-black max-w-5xl leading-relaxed mb-12">
         Driven by passion, I successfully pivoted my career from a non-technical
         background (UPSC/Humanities) to a professional developer role. I
         self-taught my way into the field, securing a traineeship and then a
@@ -157,14 +157,14 @@ export default function Experience({ setActiveSection }) {
       <div className="flex justify-between items-center mt-12 text-sm">
         <button
           onClick={() => setActiveSection("About Me")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+          className="hover:opacity-100 text-gray-500 flex items-center gap-1 font-medium"
         >
           <ArrowLeft size={16} /> About Me
         </button>
 
         <button
           onClick={() => setActiveSection("Skills & Tools")}
-          className="hover:opacity-100 dark:text-white text-black opacity-50 flex items-center gap-1 font-medium"
+          className="hover:opacity-100 text-gray-500 flex items-center gap-1 font-medium"
         >
           Skills & Tools <ArrowRight size={16} />
         </button>
