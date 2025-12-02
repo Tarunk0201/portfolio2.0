@@ -19,7 +19,7 @@ const ExperienceItem = ({
     {/* Icon/Bullet Point */}
     <div className="flex-shrink-0 mt-1">
       {/* Circle background matching the style */}
-      <div className="w-4 h-4 rounded-full bg-green-600 ring-4 dark:ring-gray-900 ring-gray-200 flex items-center justify-center">
+      <div className="w-4 h-4 rounded-full bg-violet-600 ring-4 dark:ring-gray-900 ring-gray-200 flex items-center justify-center">
         {/* Optional: You could use an icon here, but the image shows a simple circle */}
       </div>
     </div>
@@ -31,7 +31,7 @@ const ExperienceItem = ({
           {title} · {company}
         </h4>
         {latest && (
-          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-600 text-gray-200 tracking-wider">
+          <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-violet-600 text-gray-200 tracking-wider">
             Latest
           </span>
         )}
@@ -93,7 +93,7 @@ export default function Experience({ setActiveSection }) {
     {
       title: "MERN stack Developer",
       company: "Archism",
-      dates: "Oct. 2025 - Present",
+      dates: "October 2025 - Present",
       description:
         "Leading the development of the company’s core real estate platform, overseeing end-to-end project execution.",
       description2:

@@ -53,7 +53,7 @@ export default function ProjectDetail({ setActiveSection, project }) {
           {currentProject.techStack.map((tech) => (
             <span
               key={tech}
-              className="text-sm font-medium px-4 py-1.5 rounded-full bg-gray-800 text-gray-300"
+              className="text-sm font-medium px-4 py-1.5 rounded-full dark:bg-gray-800 bg-gray-300 text-black dark:text-gray-300"
             >
               {tech}
             </span>
@@ -91,14 +91,14 @@ export default function ProjectDetail({ setActiveSection, project }) {
               {/* Live Link Button (Styled with violet from your reference) */}
               <button
                 onClick={() => window.open(currentProject.liveLink, "_blank")}
-                className="inline-flex items-center justify-center text-sm font-semibold px-5 py-2.5 rounded-lg bg-green-600 hover:bg-violet-700  transition-colors"
+                className="inline-flex items-center justify-center text-sm font-semibold px-5 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700  transition-colors duration-500"
               >
                 Live <ArrowUpRight size={16} className="ml-1.5" />
               </button>
               {/* GitHub Link (Styled like your nav links) */}
               <button
                 onClick={() => window.open(currentProject.githubLink, "_blank")}
-                className="hover:opacity-100  opacity-50 flex items-center gap-1 -z-1 font-medium transition-opacity"
+                className="hover:opacity-100  opacity-50 flex items-center gap-1 font-medium transition-opacity"
               >
                 GitHub <ArrowUpRight size={16} />
               </button>

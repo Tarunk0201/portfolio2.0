@@ -67,7 +67,7 @@ export default function AboutMe({ setActiveSection }) {
           href="/Tarun Kumar (MERN Stack).pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-green-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
+          className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
         >
           Get Resume <ExternalLink size={16} />
         </a>

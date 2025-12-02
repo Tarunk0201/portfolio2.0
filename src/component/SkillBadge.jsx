@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 // Helper component for the skill badges
 const SkillBadge = ({ children, className = "" }) => (
   <span
-    className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gray-800 text-gray-200 border border-gray-700 hover:bg-green-600 hover:border-violet-600 transition-colors cursor-default ${className}`}
+    className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold dark:bg-gray-800 bg-gray-300 text-black dark:text-gray-300 hover:bg-violet-600 transition-colors duration-500 duration-500 cursor-default ${className}`}
   >
     {children}
   </span>

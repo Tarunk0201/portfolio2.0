@@ -28,7 +28,7 @@ export default function Footer() {
             href="https://yourwebsite.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-violet-400 hover:text-violet-300 font-medium transition-colors"
+            className="text-violet-400 hover:text-violet-300 font-medium transition-colors duration-500"
           >
             Tarun Singh
           </a>{" "}
@@ -37,7 +37,7 @@ export default function Footer() {
             href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="text-violet-400 hover:text-violet-300 font-medium transition-colors"
+            className="text-violet-400 hover:text-violet-300 font-medium transition-colors duration-500"
           >
             github
           </a>

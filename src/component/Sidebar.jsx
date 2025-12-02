@@ -49,7 +49,7 @@ export default function Sidebar({
             <button
               key={item}
               onClick={() => handleSectionClick(item)}
-              className={`text-left px-3 py-2 rounded-md transition-colors ${
+              className={`text-left px-3 py-2 rounded-md transition-colors duration-500 ${
                 active === item
                   ? "bg-white/10 opacity-100"
                   : "hover:bg-white/5 opacity-50"

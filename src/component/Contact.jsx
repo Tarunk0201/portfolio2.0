@@ -70,8 +70,8 @@ export default function Contact({ setActiveSection }) {
   };
 
   return (
-    <section className="min-h-screen text-gray-100 flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24 ">
-      <h2 className="text-2xl md:text-5xl font-extrabold text-white mb-2">
+    <section className="min-h-screen flex flex-col justify-start py-8 px-8 md:px-16 lg:px-24 ">
+      <h2 className="text-2xl md:text-5xl font-extrabold dark:text-white text-black mb-2">
         Contact
       </h2>
 
@@ -87,7 +87,7 @@ export default function Contact({ setActiveSection }) {
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block md:text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold dark:text-white text-black"
           >
             Name<span className="text-red-500">*</span>
           </label>
@@ -97,14 +97,14 @@ export default function Contact({ setActiveSection }) {
             name="name"
             placeholder="Your name, your fame"
             required
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors"
+            className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-900 border dark:border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors duration-500"
           />
         </div>
 
         <div className="space-y-1">
           <label
             htmlFor="email"
-            className="block md:text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold dark:text-white text-black"
           >
             Email<span className="text-red-500">*</span>
           </label>
@@ -114,7 +114,7 @@ export default function Contact({ setActiveSection }) {
             name="email"
             placeholder="Where can I reach you back?"
             required
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors"
+            className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-900 border dark:border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors duration-500"
           />
           <p className="text-sm text-gray-500 ml-1">
             Temporary emails are also accepted, unless you wish to hear back 😉
@@ -124,7 +124,7 @@ export default function Contact({ setActiveSection }) {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="block md:text-lg font-semibold text-white"
+            className="block md:text-lg font-semibold dark:text-white text-black"
           >
             Message<span className="text-red-500">*</span>
           </label>
@@ -134,7 +134,7 @@ export default function Contact({ setActiveSection }) {
             rows="5"
             placeholder="Your words, my inbox."
             required
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors resize-y"
+            className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-900 border dark:border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-600 transition-colors duration-500 resize-y"
           ></textarea>
         </div>
 
@@ -142,7 +142,7 @@ export default function Contact({ setActiveSection }) {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 bg-green-600 text-white text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors shadow-lg shadow-violet-600/30
+            className="w-full py-4 bg-violet-600 dark:text-white text-black text-lg font-bold rounded-lg hover:bg-violet-700 transition-colors duration-500 shadow-lg shadow-violet-600/30
                      flex items-center justify-center gap-2
                      disabled:bg-violet-400 disabled:cursor-not-allowed"
           >
@@ -159,7 +159,7 @@ export default function Contact({ setActiveSection }) {
           <button
             type="button"
             onClick={handleReset}
-            className="w-full py-4 text-gray-400 text-lg font-bold rounded-lg hover:text-white transition-colors border border-transparent hover:border-gray-700"
+            className="w-full py-4 text-gray-400 text-lg font-bold rounded-lg hover:text-white transition-colors duration-500 border border-transparent hover:border-gray-700"
           >
             Reset
           </button>

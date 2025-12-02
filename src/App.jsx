@@ -143,7 +143,7 @@ export default function App() {
               </p>
               <button
                 onClick={closePopup}
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-violet-700 text-white px-10 py-1.5 rounded-md text-sm font-semibold transition-all"
+                className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-10 py-1.5 rounded-md text-sm font-semibold transition-all"
               >
                 OK
               </button>

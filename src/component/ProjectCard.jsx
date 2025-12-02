@@ -3,15 +3,17 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 // Helper component for the individual project card
 const ProjectCard = ({ title, tagline, description, onClick }) => (
   <div
-    className="p-6 bg-gray-800 rounded-lg shadow-xl border border-gray-700 hover:border-violet-600 transition-all duration-300 flex flex-col justify-between cursor-pointer"
+    className="p-6 dark:bg-gray-800 bg-gray-200 rounded-lg shadow-xl border dark:border-gray-700 border-gray-200 hover:border-violet-600 transition-all duration-300 flex flex-col justify-between cursor-pointer"
     onClick={onClick}
   >
     <div>
-      <h4 className="text-xl font-bold text-white mb-1">{title}</h4>
+      <h4 className="text-xl font-bold dark:text-white text-gray-700 mb-1">
+        {title}
+      </h4>
       <p className="text-lg font-semibold text-violet-400 mb-3">{tagline}</p>
       {/* <p className="text-gray-300 text-base mb-4 line-clamp-3">{description}</p> */}
     </div>
-    <div className="text-sm font-medium text-violet-500 hover:text-violet-400 transition-colors">
+    <div className="text-sm font-medium text-violet-500 hover:text-violet-400 transition-colors duration-500">
       Learn More...
     </div>
   </div>
@@ -60,118 +62,46 @@ export default function Projects({ setActiveSection, setSelectedProject }) {
       liveLink: "https://play.google.com/store/apps/details?id=com.swasthfit",
       githubLink: "https://github.com/Tarunk0201/swasthfit.git",
     },
-    // {
-    //   title: "Portfolio | Aditya Domle",
-    //   tagline:
-    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-    //   description:
-    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-    //   link: "#",
-    //   subtitle:
-    //     "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-    //   techStack: ["React.js", "Tailwind CSS", "Vite", "Framer Motion"],
-    //   features: [
-    //     "Dynamic project showcase",
-    //     "Skills and contributions section",
-    //     "Responsive design",
-    //     "Smooth animations",
-    //   ],
-    //   learnings: [
-    //     "Advanced React state management",
-    //     "Tailwind CSS for styling",
-    //     "Vite for fast development",
-    //   ],
-    //   challenges: [
-    //     "Optimizing performance for large content",
-    //     "Ensuring cross-browser compatibility",
-    //   ],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    // },
-    // {
-    //   title: "News Hub | Real-Time News Platform",
-    //   tagline: "Real-Time News Platform",
-    //   description:
-    //     "A real-time news platform delivering the latest headlines across various categories using the News API.",
-    //   link: "#",
-    //   subtitle:
-    //     "A real-time news platform delivering the latest headlines across various categories using the News API.",
-    //   techStack: ["React.js", "News API", "Tailwind CSS"],
-    //   features: [
-    //     "Real-time news updates",
-    //     "Category-based filtering",
-    //     "Responsive design",
-    //     "Search functionality",
-    //   ],
-    //   learnings: [
-    //     "API integration",
-    //     "State management for dynamic data",
-    //     "UI/UX for news platforms",
-    //   ],
-    //   challenges: [
-    //     "Handling API rate limits",
-    //     "Ensuring data freshness",
-    //     "Optimizing for mobile devices",
-    //   ],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    // },
-    // {
-    //   title: "Freshmart Store | Modern Grocery Web App",
-    //   tagline: "Modern Grocery Web App",
-    //   description:
-    //     "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
-    //   link: "#",
-    //   subtitle:
-    //     "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
-    //   techStack: ["React.js", "Vite", "Redux", "Tailwind CSS"],
-    //   features: [
-    //     "Product catalog",
-    //     "Shopping cart functionality",
-    //     "User authentication",
-    //     "Responsive design",
-    //   ],
-    //   learnings: [
-    //     "Redux for state management",
-    //     "Building e-commerce features",
-    //     "Vite for build optimization",
-    //   ],
-    //   challenges: [
-    //     "Complex state management",
-    //     "Ensuring security for payments",
-    //     "Scalability for product inventory",
-    //   ],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    // },
-    // {
-    //   title: "GitHub Profile Viewer | Instant GitHub Insights",
-    //   tagline: "Instant GitHub Insights",
-    //   description:
-    //     "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
-    //   link: "#",
-    //   subtitle:
-    //     "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
-    //   techStack: ["HTML", "CSS", "JavaScript", "GitHub API"],
-    //   features: [
-    //     "Profile overview",
-    //     "Repository listing",
-    //     "Follower and following counts",
-    //     "Clean UI design",
-    //   ],
-    //   learnings: [
-    //     "Vanilla JavaScript for DOM manipulation",
-    //     "API data fetching",
-    //     "Responsive CSS",
-    //   ],
-    //   challenges: [
-    //     "Handling API errors",
-    //     "Optimizing for different screen sizes",
-    //     "Ensuring fast load times",
-    //   ],
-    //   liveLink: "#",
-    //   githubLink: "#",
-    // },
+    {
+      title: "DreamWheel | Full-Stack Antique Showcase Development",
+      tagline:
+        "A full-stack React and Node.js platform dedicated to showcasing rare and antique vehicles.",
+      description:
+        "DreamWheel is a comprehensive web application designed exclusively to showcase a curated collection of antique and rare vehicles. As the Sole Full-Stack Developer, I was responsible for architecting and developing the entire application, including the React.js frontend and the Node.js/Express backend APIs. I managed the database design, built the secure REST APIs to serve detailed vehicle data, and created the responsive UI to display extensive specifications, history, and high-resolution imagery.",
+      link: "https://dreamwheel.tarundev.in/",
+      Role: "Full-Stack Developer (React & Node.js)",
+      subtitle:
+        "A complete application built from the ground up using the React and Node.js stack.",
+      techStack: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "REST APIs",
+        "Redux Toolkit",
+      ],
+      features: [
+        "Developed responsive SPA using React/Tailwind CSS for high performance and visual fidelity.",
+        "Designed Node.js/Express backend to serve structured vehicle data via secure REST APIs.",
+        "Integrated custom frontend/backend for fetching detailed vehicle specifications and history.",
+        "Created advanced React filtering components to effectively sort the antique car collection.",
+        "Managed state with Redux Toolkit; implemented async data fetching from custom API.",
+      ],
+      learnings: [
+        "Gained expertise building and deploying a complete React and Node.js full-stack application.",
+        "Mastered the full development cycle: database design, API creation, and state management.",
+        "Improved skills creating performant and scalable data serving layers using Node.js/Express.",
+        "Learned best practices for API integration and data structure design in decoupled architecture.",
+      ],
+      challenges: [
+        "Optimized the full-stack data pipeline architecture for speed and decoupled responsiveness.",
+        "Built and documented the internal REST API to efficiently handle historical vehicle data queries.",
+        "Ensured robust data synchronization and error handling between React and Node.js backend.",
+      ],
+      liveLink: "https://dreamwheel.tarundev.in/",
+      githubLink: "https://github.com/Tarunk0201/cars-frontend",
+    },
   ];
 
   return (
