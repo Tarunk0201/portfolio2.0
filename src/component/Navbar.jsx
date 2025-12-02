@@ -47,7 +47,7 @@ export default function Navbar({
     hour12: true,
   });
 
-  const versions = ["v1.0", "v2.0", "v3.0"];
+  const versions = ["v1.0"];
   const handleVersionSelect = (version) => {
     setSelectedVersion(version);
     // Close the menu after selection
